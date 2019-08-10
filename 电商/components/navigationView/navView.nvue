@@ -1,0 +1,76 @@
+<template>
+	<div class="nav_view" :style="{height:statusBarHeight+44+'wx'}">
+		<view class="nav_content">
+			<image class="fanhui_img" src="../../static/fanhui.png"></image>
+			<text class="nav_content_text">{{city}}</text>
+		</view>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				statusBarHeight: 20,
+				city: ''
+			}
+		},
+		mounted() {
+			this.init();
+		},
+		methods: {
+			init() {
+				uni.getSystemInfo({
+					success: (res) => {
+						this.statusBarHeight = res.statusBarHeight;
+					}
+				});
+				this.nVueTitle = uni.getCurrentSubNVue();
+				this.nVueTitle.onMessage(res => {
+					console.log(res)
+					this.setCity(res.data.city);
+
+
+				});
+			},
+			setCity(city) {
+				this.city = city;
+			},
+			inputfocus() {
+				this.subNVue.postMessage({
+					type: 'focus'
+				});
+			}
+		}
+	}
+</script>
+
+<style>
+	.nav_view {
+		width: 750px;
+		background-image: linear-gradient(to right, #01ABFF, #2450ED);
+	}
+
+	.nav_content {
+		width: 750px;
+		height: 100%;
+	}
+
+	.nav_content_text {
+		color: #FFFFFF;
+		font-size: 34upx;
+		font-family: PingFangSC-Regular;
+		font-weight: bold;
+		position: fixed;
+		bottom: 15upx;
+		left: 350;
+	}
+
+	.fanhui_img {
+		width: 30px;
+		height: 32px;
+		position: fixed;
+		bottom: 20;
+		left: 20;
+	}
+</style>

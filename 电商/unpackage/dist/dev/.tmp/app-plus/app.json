@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/cart/cart",
+    "pages/classification/index",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#A1A1A1",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#0D80FC",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/home_nomal.png",
+        "selectedIconPath": "static/home_select.png"
+      },
+      {
+        "pagePath": "pages/classification/index",
+        "text": "收益",
+        "iconPath": "static/profit_nomal.png",
+        "selectedIconPath": "static/profit_select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "分享",
+        "iconPath": "static/share.png",
+        "selectedIconPath": "static/share.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "交易",
+        "iconPath": "static/transaction_nomal.png",
+        "selectedIconPath": "static/transaction_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/mine_nomal.png",
+        "selectedIconPath": "static/mine_select.png"
+      }
+    ]
+  },
+  "nvueCompiler": "weex",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "电商",
+  "compilerVersion": "2.1.6",
+  "usingComponents": {}
+}

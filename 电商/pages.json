@@ -5,8 +5,75 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"titleNView": false,
+					"softinputNavBar": "none",
+					"subNVues": [{
+						"id": "homeTitleNvue", // 唯一标识 
+						"path": "components/navigationView/navView", // 页面路径
+						"type": "navigationBar"
+					}]
+				}
+			}
+		},
+		{
+			"path": "pages/cart/cart",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/classification/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
 		}
 	],
+	"tabBar": {
+		"color": "#A1A1A1",
+		"backgroundColor": "#ffffff",
+		"selectedColor": "#0D80FC",
+		"list": [{
+			"pagePath": "pages/home/home",
+			"text": "首页",
+			"iconPath": "static/home_nomal.png",
+			"selectedIconPath": "static/home_select.png"
+		}, {
+			"pagePath": "pages/classification/index",
+			"text": "收益",
+			"iconPath": "static/profit_nomal.png",
+			"selectedIconPath": "static/profit_select.png"
+		}, {
+			"pagePath": "pages/index/index",
+			"text": "分享",
+			"iconPath": "static/share.png",
+			"selectedIconPath": "static/share.png"
+		}, {
+			"pagePath": "pages/cart/cart",
+			"text": "交易",
+			"iconPath": "static/transaction_nomal.png",
+			"selectedIconPath": "static/transaction_select.png"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"text": "我的",
+			"iconPath": "static/mine_nomal.png",
+			"selectedIconPath": "static/mine_select.png"
+		}]
+	
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
